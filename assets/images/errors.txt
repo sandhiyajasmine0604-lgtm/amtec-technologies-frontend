@@ -1,0 +1,20 @@
+hase 1 – Dashboard (30–45 min)
+✅ Fix sidebar/content alignment permanently
+✅ Fix 4 dashboard cards in one row
+✅ Latest Products section
+✅ Quick Actions
+✅ Consistent AMTEC colors (#163f72, #ffc107, #ffffff)
+✅ Responsive layout
+Phase 2 – Product Module
+✅ Fix Edit button auto-scroll
+✅ Fix Cancel button
+✅ Professional action buttons
+✅ Search products
+✅ Filter by category/brand/status
+✅ Better product table styling
+Phase 3 – Hero Banner CMS
+Multiple banners
+Live preview
+Button text & links
+Enable/Disable
+Default banner

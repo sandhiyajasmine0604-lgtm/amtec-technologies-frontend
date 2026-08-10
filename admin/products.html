@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products - AMTEC Admin</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Common Admin CSS -->
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+
+</head>
+
+<body>
+ <div id="sidebar-container"></div>  
+    
+<div class="main-content">
+
+    <div class="topbar">
+
+        <h2>Product Management</h2>
+
+    </div>
+
+    <div class="content-box">
+
+        <h3 class="mb-4">
+            Add New Product
+        </h3>
+
+        <form id="productForm" enctype="multipart/form-data">
+            <input type="hidden" id="product_id">
+
+<div class="row">
+
+    <div class="col-md-6 mb-3">
+
+        <label class="form-label">
+            Product Name
+        </label>
+
+        <input
+        type="text"
+        class="form-control"
+        id="product_name"
+        required>
+
+    </div>
+
+    <div class="col-md-6 mb-3">
+
+        <label class="form-label">
+            Model Number
+        </label>
+
+        <input
+        type="text"
+        class="form-control"
+        id="model_number">
+
+    </div>
+
+    <div class="col-md-6 mb-3">
+
+        <label class="form-label">
+            Brand
+        </label>
+
+        <input
+        type="text"
+        class="form-control"
+        id="brand">
+
+    </div>
+    <div class="col-12 mb-3">
+    <label class="form-label">Short Description</label>
+
+    <textarea
+        id="short_description"
+        class="form-control"
+        rows="3"
+        placeholder="Short description">
+    </textarea>
+</div>
+
+<div class="col-12 mb-3">
+
+    <label class="form-label">
+        Description
+    </label>
+
+    <textarea
+        id="description"
+        class="form-control"
+        rows="6"
+        placeholder="Full product description">
+    </textarea>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">
+        Specifications
+    </label>
+
+    <textarea
+        id="specifications"
+        class="form-control"
+        rows="6"
+        placeholder="Specifications">
+    </textarea>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">
+        Features
+    </label>
+
+    <textarea
+        id="features"
+        class="form-control"
+        rows="6"
+        placeholder="Features">
+    </textarea>
+
+</div>
+    <div class="col-md-6 mb-3">
+
+        <label class="form-label">
+            Category
+        </label>
+
+        <select
+        id="category_id"
+        class="form-select">
+
+            <option value="">
+                Loading Categories...
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="col-md-4 mb-3">
+
+        <label class="form-label">
+            Price
+        </label>
+
+        <input
+        type="number"
+        class="form-control"
+        id="price">
+
+    </div>
+
+    <div class="col-md-4 mb-3">
+
+        <label class="form-label">
+            Stock
+        </label>
+
+        <input
+        type="number"
+        class="form-control"
+        id="stock">
+
+    </div>
+
+    <div class="col-md-4 mb-3">
+
+        <label class="form-label">
+            Status
+        </label>
+
+        <select
+        id="status"
+        class="form-select">
+
+            <option>Active</option>
+            <option>Inactive</option>
+
+        </select>
+     
+    </div>
+    
+    <hr class="my-4">
+
+<h4>Product Files</h4>
+
+<div class="row">
+
+    <div class="col-md-6 mb-3">
+
+        <label class="form-label">
+            Product Image
+        </label>
+
+        <input
+            type="file"
+            class="form-control"
+            id="image"
+            accept="image/*">
+
+        <img
+            id="previewImage"
+            src=""
+            style="display:none;width:180px;margin-top:15px;border-radius:10px;">
+
+    </div>
+
+    <div class="col-md-6 mb-3">
+
+        <label class="form-label">
+            Datasheet (PDF)
+        </label>
+
+        <input
+            type="file"
+            class="form-control"
+            id="datasheet"
+            accept=".pdf">
+
+        <small id="pdfName"></small>
+
+    </div>
+
+</div>
+<button
+    class="btn btn-primary"
+    id="saveBtn"
+    type="submit">
+
+    <i class="fas fa-save"></i>
+    Save Product
+
+</button>
+<button
+    type="button"
+    class="btn btn-secondary ms-2"
+    id="cancelBtn"
+    style="display:none;">
+
+    Cancel
+
+</button>
+</form>
+
+    </div>
+
+    <div class="content-box mt-4">
+
+    <h3>All Products</h3>
+
+    <div class="table-responsive">
+
+        <table class="table table-hover align-middle" id="productTable">
+
+            <thead>
+
+                <tr>
+
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Brand</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+                    <th>PDF</th>
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../js/product.js"></script>
+<script src="../js/sidebar.js"></script>
+</body>
+
+</html>

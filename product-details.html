@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | AMTEC Technologies</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= Top Bar ================= -->
+
+ 
+
+       
+<!-- ================= Navigation ================= -->
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo.png" alt="AMTEC Logo">
+        </a>
+
+        <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+    Home
+</a>
+                </li>
+
+                <li class="nav-item">
+
+    <a class="nav-link" href="products.html">
+
+        Products
+
+    </a>
+
+</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Solutions</a>
+                </li>
+
+                <li class="nav-item">
+    <a class="nav-link" href="./services.html">
+        Services
+    </a>
+</li>
+            
+
+                 <li class="nav-item">
+                   <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+
+            </ul>
+            <div class="search-box ms-4 d-flex">
+
+    <input
+        type="text"
+        class="form-control"
+        placeholder="Search Products">
+
+    <button class="btn btn-primary">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+</div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<div class="container py-5">
+<nav aria-label="breadcrumb" class="mb-4">
+
+    <ol class="breadcrumb">
+
+        <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+        </li>
+
+        <li class="breadcrumb-item">
+            <a href="products.html">Products</a>
+        </li>
+
+        <li class="breadcrumb-item" id="breadcrumbCategory">
+            Loading...
+        </li>
+
+        <li class="breadcrumb-item active"
+            id="breadcrumbProduct">
+            Loading...
+        </li>
+
+    </ol>
+
+</nav>
+    <div class="row" id="productDetails">
+
+    </div>
+
+    <hr class="my-5">
+
+    <h3 class="mb-4">Related Products</h3>
+
+    <div class="row" id="relatedProducts">
+
+    </div>
+
+</div>
+<footer class="footer" id="about">
+
+    <divp[class="container">
+
+        <div class="row">
+
+            <!-- Company -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <img src="assets/images/logo.png" class="footer-logo">
+
+                <p class="mt-4">
+                    <strong>AMTEC Technologies</strong> is a trusted provider of
+                    Core Offerings: Network Deployment | Integration 
+                    | Enterprise-Wide-Infrastructure  Complete IT Infrastructure Services: Telecom |
+                     Data Center | Server | Laptop | Firewall | Boom Barrier | Bio Metric HRMS 
+                     | Access Control | RFID | Turnstiles | Baggage Scanner | D F Metal Detector 
+                     | Interactive Board | Kiosk | POS Machine | IP PBX | LED Video Wall | Xerox 
+                     | UPS Inverter | CCTV | Drone | H A Burglar Alarm | Power Solar (AMC/CMC).... across India.
+                </p>
+
+                <h4>Follow Us</h4>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+
+                </div>
+
+            </div>
+
+            <!-- Links -->
+
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+
+                    <li><a href="#">Products</a></li>
+
+                    <li><a href="#">Solutions</a></li>
+
+                    <li><a href="#">Services</a></li>
+
+                    <li><a href="#">About</a></li>
+
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="col-lg-5">
+
+                <h3>Contact Info</h3>
+
+                <p><i class="fa-solid fa-location-dot"></i>
+                #12, 11th Cross, Magadi Road,
+                Bengaluru - 560023</p>
+
+                <p><i class="fa-solid fa-phone"></i>
+                Tehgan Raman : +91 9900902162</p>
+
+                <p><i class="fa-solid fa-phone"></i>
+                Shyam Roshan : +91 8867376595</p>
+
+                <p><i class="fa-solid fa-envelope"></i>
+                amtectechnologies@gmail.com</p>
+
+                <h3 class="mt-4">Subscribe Newsletter</h3>
+
+                <form class="newsletter">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email">
+
+                    <button>Subscribe</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="copyright">
+
+            © 2026 AMTEC Technologies.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+<a href="https://wa.me/919900902162"
+class="whatsapp"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+<a href="tel:+919900902162"
+class="call-btn">
+
+<i class="fa-solid fa-phone"></i>
+
+</a>
+<iframe
+src="https://www.google.com/maps?q=11th+Cross+Magadi+Road+Bangalore&output=embed"
+width="100%"
+height="220"
+style="border:0;border-radius:10px;"
+loading="lazy">
+</iframe>
+
+<script src="js/main.js"></script>
+<div class="modal fade" id="quoteModal" tabindex="-1">
+
+<div class="modal-dialog modal-lg">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h4>Request a Quote</h4>
+
+<button
+type="button"
+class="btn-close"
+data-bs-dismiss="modal">
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<form id="quoteForm">
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+
+<label>Customer Name</label>
+
+<input
+type="text"
+id="customer_name"
+class="form-control"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Company Name</label>
+
+<input
+type="text"
+id="company_name"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Email</label>
+
+<input
+type="email"
+id="email"
+class="form-control"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Phone</label>
+
+<input
+type="text"
+id="phone"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>City</label>
+
+<input
+type="text"
+id="city"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Product Required</label>
+
+<input
+type="text"
+id="product_name"
+class="form-control"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Quantity</label>
+
+<input
+type="number"
+id="quantity"
+class="form-control"
+required>
+
+</div>
+
+<div class="col-12 mb-3">
+
+<label>Message</label>
+
+<textarea
+id="message"
+class="form-control"
+rows="4"></textarea>
+
+</div>
+
+</div>
+
+<button
+class="btn btn-primary">
+
+Submit Request
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/website/quote.js"></script>
+<script src="js/product-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+/* ================= PAGE BANNER ================= */
+/* ================= PAGE BANNER ================= */
+
+.page-banner{
+    background: linear-gradient(180deg,#eef6ff,#ffffff);
+    border-bottom:1px solid #d9e8ff;
+    padding:50px 0;
+    margin-bottom:40px;
+}
+
+.page-banner h1{
+    font-size:48px;
+    font-weight:700;
+}
+
+.page-banner nav a{
+    color:#0d6efd;
+    text-decoration:none;
+}
+.btn-warning,
+.view-btn{
+
+    background:#f7c948;
+    border:none;
+    color:#111;
+    font-weight:600;
+    border-radius:40px;
+    padding:12px 28px;
+    transition:.3s;
+}
+
+.btn-warning:hover,
+.view-btn:hover{
+
+    background:#e8b521;
+    transform:translateY(-2px);
+
+}
+.product-card{
+
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.35s;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
+
+}
+
+.product-card img{
+
+    height:220px;
+    object-fit:contain;
+    background:#fff;
+    padding:15px;
+
+}
+
+.product-card .card-body{
+
+    padding:25px;
+
+}
+
+.product-card h5{
+
+    font-weight:700;
+
+}
+
+.product-card p{
+
+    color:#666;
+
+}
+.category-box{
+
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.category-box h4{
+
+    background:#0d47a1;
+    color:#fff;
+    padding:18px;
+    margin:0;
+
+}
+
+.category-box button{
+
+    display:block;
+    padding:14px 20px;
+    color:#222;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+.category-box button:hover{
+
+    background:#f3f8ff;
+    color:#0d6efd;
+
+}
+.sort-select{
+    width:260px;
+    border-radius:12px;
+    height:50px;
+    font-weight:500;
+    border:1px solid #ddd;
+}
+
+.sort-select:focus{
+    box-shadow:none;
+    border-color:#0d6efd;
+}
+.products-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.products-header h2{
+    font-size:34px;
+    font-weight:700;
+    color:#0b2c5f;
+    margin-bottom:5px;
+}
+
+.products-header p{
+    color:#777;
+    margin:0;
+    font-size:15px;
+}
+
+.sort-select{
+    width:250px;
+}
