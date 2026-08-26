@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/products/categories/all";
+const API = "https://amtec-technologies-backend-production.up.railway.app/api/products/categories/all";
 
 let allProducts = [];
 
@@ -89,7 +89,7 @@ if (category === "") {
                     <img
                         src="${
                             product.image
-                            ? "http://localhost:5000/" + product.image
+                            ? "https://amtec-technologies-backend-production.up.railway.app/" + product.image
                             : "assets/images/no-image.png"
                         }"
 

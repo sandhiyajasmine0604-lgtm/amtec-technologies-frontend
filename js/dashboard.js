@@ -1,5 +1,5 @@
-const PRODUCT_API = "http://localhost:5000/api/products";
-const CATEGORY_API = "http://localhost:5000/api/categories";
+const PRODUCT_API = "https://amtec-technologies-backend-production.up.railway.app/api/products";
+const CATEGORY_API = "https://amtec-technologies-backend-production.up.railway.app/api/categories";
 const currentPage="dashboard";
 async function loadDashboard() {
 
@@ -9,13 +9,13 @@ async function loadDashboard() {
         const categoryElement = document.getElementById("categoryCount");
 
         if (productElement) {
-            const productRes = await fetch("http://localhost:5000/api/products");
+            const productRes = await fetch("https://amtec-technologies-backend-production.up.railway.app/api/products");
             const products = await productRes.json();
             productElement.innerText = products.length;
         }
 
         if (categoryElement) {
-            const categoryRes = await fetch("http://localhost:5000/api/categories");
+            const categoryRes = await fetch("https://amtec-technologies-backend-production.up.railway.app/api/categories");
             const categories = await categoryRes.json();
             categoryElement.innerText = categories.length;
         }
@@ -43,7 +43,7 @@ if (logoutBtn) {
     });
 
 }
-const API = "http://localhost:5000/api/products";
+const API = "https://amtec-technologies-backend-production.up.railway.app/api/products";
 
 async function loadDashboard(){
 
@@ -76,7 +76,7 @@ document.getElementById("categoryCount").innerText = categories.length;
             <td>
 
                 <img
-                src="http://localhost:5000/${product.image}"
+                src="https://amtec-technologies-backend-production.up.railway.app/${product.image}"
                 width="55"
                 style="border-radius:10px;">
 

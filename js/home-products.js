@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/products";
+const API = "https://amtec-technologies-backend-production.up.railway.app/api/products";
 
 async function loadHomeProducts() {
 
@@ -21,7 +21,7 @@ async function loadHomeProducts() {
                 <img
                     src="${
                         product.image
-                        ? "http://localhost:5000/" + product.image
+                        ? "https://amtec-technologies-backend-production.up.railway.app/" + product.image
                         : "assets/images/no-image.png"
                     }"
                     class="card-img-top"

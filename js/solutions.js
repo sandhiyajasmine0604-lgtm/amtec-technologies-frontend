@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/solutions";
+const API = "https://amtec-technologies-backend-production.up.railway.app/api/solutions";
 
 const container = document.getElementById("solutionsContainer");
 

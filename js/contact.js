@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/contact";
+const API = "https://amtec-technologies-backend-production.up.railway.app/api/contact";
 
 async function loadContact(){
 

@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/services";
+const API = "https://amtec-technologies-backend-production.up.railway.app/api/services";
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
@@ -33,7 +33,7 @@ document.getElementById("serviceDescription").innerHTML = `
 
 document.getElementById("serviceImage").src =
 service.image
-? "http://localhost:5000/" + service.image
+? "https://amtec-technologies-backend-production.up.railway.app/" + service.image
 : "assets/images/default-service.jpg";
 
 document.getElementById("quoteBtn").onclick = function () {

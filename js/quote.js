@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/quotes";
+const API = "https://amtec-technologies-backend-production.up.railway.app/api/quotes";
 
 const quoteModal = new bootstrap.Modal(
     document.getElementById("quoteModal")

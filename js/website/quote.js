@@ -1,5 +1,5 @@
 console.log("Quote JS Loaded");
-const QUOTE_API = "http://localhost:5000/api/quotes";
+const QUOTE_API = "https://amtec-technologies-backend-production.up.railway.app/api/quotes";
 
 document.getElementById("quoteForm").addEventListener("submit", async function(e){
 
@@ -76,7 +76,7 @@ async function viewQuote(id){
     if(quote.quotation_pdf){
 
         document.getElementById("currentQuotation").innerHTML = `
-            <a href="http://localhost:5000/${quote.quotation_pdf}"
+            <a href="https://amtec-technologies-backend-production.up.railway.app/${quote.quotation_pdf}"
                target="_blank"
                class="btn btn-info btn-sm">
                View Uploaded Quotation

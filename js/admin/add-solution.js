@@ -5,7 +5,7 @@ let editingId = null;
 // Load Solutions
 async function loadSolutions() {
 
-    const res = await fetch("http://localhost:5000/api/solutions");
+    const res = await fetch("https://amtec-technologies-backend-production.up.railway.app/api/solutions");
 
     const solutions = await res.json();
 
@@ -19,7 +19,7 @@ async function loadSolutions() {
 
             <td>
                 <img
-                    src="http://localhost:5000/${solution.image}"
+                    src="https://amtec-technologies-backend-production.up.railway.app/${solution.image}"
                     width="70">
             </td>
 
@@ -80,7 +80,7 @@ form.addEventListener("submit", async function (e) {
 
     }
 
-    let url = "http://localhost:5000/api/solutions";
+    let url = "https://amtec-technologies-backend-production.up.railway.app/api/solutions";
     let method = "POST";
 
     if (editingId) {
@@ -123,7 +123,7 @@ async function deleteSolution(id) {
 
     const res = await fetch(
 
-        `http://localhost:5000/api/solutions/${id}`,
+        `https://amtec-technologies-backend-production.up.railway.app/api/solutions/${id}`,
 
         {
             method: "DELETE"
@@ -141,7 +141,7 @@ async function deleteSolution(id) {
 async function editSolution(id) {
 
     const res = await fetch(
-        `http://localhost:5000/api/solutions/${id}`
+        `https://amtec-technologies-backend-production.up.railway.app/api/solutions/${id}`
     );
 
     const solution = await res.json();

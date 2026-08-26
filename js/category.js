@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/categories";
+const API = "https://amtec-technologies-backend-production.up.railway.app/api/categories";
 
 const form = document.getElementById("categoryForm");
 const tableBody = document.querySelector("#categoryTable tbody");

@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/services";
+const API = "https://amtec-technologies-backend-production.up.railway.app/api/services";
 
 const container = document.getElementById("servicesContainer");
 
@@ -21,7 +21,7 @@ container.innerHTML += `
         <img
             src="${
                 service.image
-                ? "http://localhost:5000/" + service.image
+                ? "https://amtec-technologies-backend-production.up.railway.app/" + service.image
                 : "assets/images/default-service.jpg"
             }"
             class="service-image"

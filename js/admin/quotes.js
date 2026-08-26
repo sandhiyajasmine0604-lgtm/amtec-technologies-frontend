@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/quotes";
+const API = "https://amtec-technologies-backend-production.up.railway.app/api/quotes";
 
 const tableBody = document.querySelector("#quoteTable tbody");
 
@@ -96,7 +96,7 @@ async function viewQuote(id){
     if(quote.quotation_pdf){
 
         document.getElementById("currentQuotation").innerHTML = `
-            <a href="http://localhost:5000/${quote.quotation_pdf}"
+            <a href="https://amtec-technologies-backend-production.up.railway.app/${quote.quotation_pdf}"
                target="_blank"
                class="btn btn-info">
                View Uploaded PDF
@@ -208,7 +208,7 @@ document.getElementById("sendWhatsapp").onclick = async function(){
     }
 
     const pdfUrl =
-    "http://localhost:5000/" + quote.quotation_pdf;
+    "https://amtec-technologies-backend-production.up.railway.app/" + quote.quotation_pdf;
 
     const message =
 

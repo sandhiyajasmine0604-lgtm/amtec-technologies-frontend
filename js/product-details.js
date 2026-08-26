@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/products";
+const API = "https://amtec-technologies-backend-production.up.railway.app/api/products";
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
@@ -9,7 +9,7 @@ async function loadProduct() {
     const product = await res.json();
 
     const image = product.image
-        ? "http://localhost:5000/" + product.image.replace(/\\/g, "/")
+        ? "https://amtec-technologies-backend-production.up.railway.app/" + product.image.replace(/\\/g, "/")
         : "assets/images/no-image.png";
 document.getElementById("breadcrumbCategory").innerText =
     product.category_name;
@@ -25,7 +25,7 @@ loadRelatedProducts(product.id);
     <div class="product-gallery">
 
         <img
-            src="${product.image ? "http://localhost:5000/" + product.image.replace(/\\/g,"/") : "assets/images/no-image.png"}"
+            src="${product.image ? "https://amtec-technologies-backend-production.up.railway.app/" + product.image.replace(/\\/g,"/") : "assets/images/no-image.png"}"
             class="img-fluid rounded shadow">
 
     </div>
@@ -79,7 +79,7 @@ loadRelatedProducts(product.id);
 
         <a
             class="btn btn-outline-primary px-4"
-            href="http://localhost:5000/${product.datasheet?.replace(/\\/g,"/")}"
+            href="https://amtec-technologies-backend-production.up.railway.app/${product.datasheet?.replace(/\\/g,"/")}"
             target="_blank">
 
             <i class="fa fa-file-pdf"></i>
@@ -151,7 +151,7 @@ loadProduct();
 async function loadRelatedProducts(id) {
 
     const res = await fetch(
-        `http://localhost:5000/api/products/related/${id}`
+        `https://amtec-technologies-backend-production.up.railway.app/api/products/related/${id}`
     );
 
     const products = await res.json();
@@ -185,7 +185,7 @@ async function loadRelatedProducts(id) {
                 <img
                     src="${
                         product.image
-                        ? "http://localhost:5000/" + product.image.replace(/\\/g,"/")
+                        ? "https://amtec-technologies-backend-production.up.railway.app/" + product.image.replace(/\\/g,"/")
                         : "assets/images/no-image.png"
                     }"
                     class="card-img-top">

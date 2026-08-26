@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/services";
+const API = "https://amtec-technologies-backend-production.up.railway.app/api/services";
 
 const form = document.getElementById("serviceForm");
 const tableBody = document.querySelector("#serviceTable tbody");

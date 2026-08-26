@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/products";
+const API = "https://amtec-technologies-backend-production.up.railway.app/api/products";
 
 const categoryDropdown = document.getElementById("category_id");
 const form = document.getElementById("productForm");
@@ -10,7 +10,7 @@ const cancelBtn = document.getElementById("cancelBtn");
 // Load Categories
 async function loadCategories() {
 
-    const res = await fetch("http://localhost:5000/api/categories");
+    const res = await fetch("https://amtec-technologies-backend-production.up.railway.app/api/categories");
     const data = await res.json();
 
     categoryDropdown.innerHTML = '<option value="">Select Category</option>';
@@ -125,7 +125,7 @@ async function editProduct(id){
 
     if(product.image){
 
-        previewImage.src = "http://localhost:5000/" + product.image;
+        previewImage.src = "https://amtec-technologies-backend-production.up.railway.app/" + product.image;
 
         previewImage.style.display = "block";
 
@@ -134,7 +134,7 @@ async function editProduct(id){
     if(product.datasheet){
 
         pdfName.innerHTML =
-            `<a href="http://localhost:5000/${product.datasheet}" target="_blank">
+            `<a href="https://amtec-technologies-backend-production.up.railway.app/${product.datasheet}" target="_blank">
                 View Current PDF
             </a>`;
 
@@ -215,7 +215,7 @@ async function loadProducts() {
 
             <td>
 
-                <img src="http://localhost:5000/${product.image}"
+                <img src="https://amtec-technologies-backend-production.up.railway.app/${product.image}"
                      width="70"
                      height="70"
                      style="object-fit:cover;border-radius:8px;">
@@ -251,7 +251,7 @@ async function loadProducts() {
                     product.datasheet
                     ?
 
-                    `<a href="http://localhost:5000/${product.datasheet}" target="_blank">
+                    `<a href="https://amtec-technologies-backend-production.up.railway.app/${product.datasheet}" target="_blank">
 
                         PDF
 
