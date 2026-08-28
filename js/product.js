@@ -1,5 +1,17 @@
 const API = "https://amtec-technologies-backend-production.up.railway.app/api/products";
+function getFileUrl(file) {
 
+    if (!file) {
+        return "";
+    }
+
+    if (file.startsWith("http://") || file.startsWith("https://")) {
+        return file.replace("http://", "https://");
+    }
+
+    return  +
+        file.replace(/\\/g, "/");
+}
 const categoryDropdown = document.getElementById("category_id");
 const form = document.getElementById("productForm");
 let editMode = false;
@@ -64,8 +76,16 @@ formData.append(
 );
     formData.append("status", document.getElementById("status").value);
 
-    formData.append("image", document.getElementById("image").files[0]);
-    formData.append("datasheet", document.getElementById("datasheet").files[0]);
+    const imageFile = document.getElementById("image").files[0];
+const datasheetFile = document.getElementById("datasheet").files[0];
+
+if (imageFile) {
+    formData.append("image", imageFile);
+}
+
+if (datasheetFile) {
+    formData.append("datasheet", datasheetFile);
+}
 
     let url = API;
 let method = "POST";
@@ -86,6 +106,18 @@ const res = await fetch(url, {
 });
 
     const result = await res.json();
+
+console.log("STATUS:", res.status);
+console.log("RESPONSE:", result);
+
+if (!res.ok) {
+    alert(
+        result.message ||
+        result.error ||
+        "Product upload failed. Check console."
+    );
+    return;
+}
 
     alert(result.message);
 
@@ -123,18 +155,20 @@ async function editProduct(id){
     document.getElementById("specifications").value = product.specifications || "";
     document.getElementById("features").value = product.features || "";
 
-    if(product.image){
+     const previewImage = document.getElementById("previewImage");
 
-        previewImage.src = "https://amtec-technologies-backend-production.up.railway.app/" + product.image;
+    if(product.image){
+        
+        previewImage.src = getFileUrl(product.image);
 
         previewImage.style.display = "block";
 
     }
 
     if(product.datasheet){
-
+        const pdfName = document.getElementById("pdfName");
         pdfName.innerHTML =
-            `<a href="https://amtec-technologies-backend-production.up.railway.app/${product.datasheet}" target="_blank">
+            `<a href="${getFileUrl(product.datasheet)}" target="_blank">
                 View Current PDF
             </a>`;
 
@@ -210,17 +244,7 @@ async function loadProducts() {
     products.forEach(product => {
 
         tableBody.innerHTML += `
-
-        <tr>
-
-            <td>
-
-                <img src="https://amtec-technologies-backend-production.up.railway.app/${product.image}"
-                     width="70"
-                     height="70"
-                     style="object-fit:cover;border-radius:8px;">
-
-            </td>
+c
 
             <td>
                 <b>${product.product_name}</b><br>
@@ -251,8 +275,7 @@ async function loadProducts() {
                     product.datasheet
                     ?
 
-                    `<a href="https://amtec-technologies-backend-production.up.railway.app/${product.datasheet}" target="_blank">
-
+                    `<a href="${getFileUrl(product.datasheet)}" target="_blank">
                         PDF
 
                     </a>`

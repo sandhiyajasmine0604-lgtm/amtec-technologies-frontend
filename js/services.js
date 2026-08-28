@@ -21,7 +21,7 @@ container.innerHTML += `
         <img
             src="${
                 service.image
-                ? "https://amtec-technologies-backend-production.up.railway.app/" + service.image
+                ?  + service.image
                 : "assets/images/default-service.jpg"
             }"
             class="service-image"

@@ -208,7 +208,7 @@ document.getElementById("sendWhatsapp").onclick = async function(){
     }
 
     const pdfUrl =
-    "https://amtec-technologies-backend-production.up.railway.app/" + quote.quotation_pdf;
+     + quote.quotation_pdf;
 
     const message =
 

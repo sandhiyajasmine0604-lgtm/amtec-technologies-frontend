@@ -33,7 +33,7 @@ document.getElementById("serviceDescription").innerHTML = `
 
 document.getElementById("serviceImage").src =
 service.image
-? "https://amtec-technologies-backend-production.up.railway.app/" + service.image
+?  + service.image
 : "assets/images/default-service.jpg";
 
 document.getElementById("quoteBtn").onclick = function () {

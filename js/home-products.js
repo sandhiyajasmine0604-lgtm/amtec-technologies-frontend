@@ -21,7 +21,7 @@ async function loadHomeProducts() {
                 <img
                     src="${
                         product.image
-                        ? "https://amtec-technologies-backend-production.up.railway.app/" + product.image
+                        ?  product.image
                         : "assets/images/no-image.png"
                     }"
                     class="card-img-top"
