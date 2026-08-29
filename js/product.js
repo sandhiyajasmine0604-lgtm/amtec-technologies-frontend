@@ -53,8 +53,7 @@ form.addEventListener("submit", async function(e){
     formData.append("model_number", document.getElementById("model_number").value);
     formData.append("brand", document.getElementById("brand").value);
     formData.append("category_id", document.getElementById("category_id").value);
-    formData.append("price", document.getElementById("price").value);
-    formData.append("stock", document.getElementById("stock").value);
+
     formData.append(
     "short_description",
     document.getElementById("short_description").value
@@ -146,8 +145,7 @@ async function editProduct(id){
     document.getElementById("model_number").value = product.model_number || "";
     document.getElementById("brand").value = product.brand || "";
     document.getElementById("category_id").value = product.category_id || "";
-    document.getElementById("price").value = product.price || "";
-    document.getElementById("stock").value = product.stock || "";
+
     document.getElementById("status").value = product.status || "Active";
 
     document.getElementById("short_description").value = product.short_description || "";
@@ -255,9 +253,7 @@ c
 
             <td>${product.category_name || "-"}</td>
 
-            <td>₹ ${product.price}</td>
-
-            <td>${product.stock}</td>
+        
 
             <td>
 
