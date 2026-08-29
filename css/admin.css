@@ -587,3 +587,4 @@ label{
     box-shadow:0 8px 18px rgba(220,53,69,.25);
 
 }
+.action-buttons { display: flex; gap: 8px; } .action-buttons .btn { flex: 1; min-width: 65px; text-align: center; }

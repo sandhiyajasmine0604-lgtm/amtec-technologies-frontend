@@ -228,10 +228,7 @@ function renderProductRows(products) {
                 }
             </td>
  
-            <td>
-                <button class="btn btn-warning btn-sm" onclick="editProduct(${product.id})">Edit</button>
-                <button class="btn btn-danger btn-sm" onclick="deleteProduct(${product.id})">Delete</button>
-            </td>
+             <td> <div class="action-buttons"> <button class="btn btn-warning btn-sm" onclick="editProduct(${product.id})">Edit</button> <button class="btn btn-danger btn-sm" onclick="deleteProduct(${product.id})">Delete</button> </div> </td>
  
         </tr>
  
